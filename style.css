@@ -1,3 +1,6 @@
+@media print, screen and (min-width: 640px) {
+    
+    
 h1{
     font-family:"Arial Black";
     size:20px;
@@ -143,4 +146,6 @@ a.footer{
 }
 .apple{
     background-color: #ffffff;
+}
+
 }
