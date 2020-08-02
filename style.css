@@ -1,9 +1,5 @@
-@media print, screen and (min-width: 640px) {
-    
-    
 h1{
     font-family:"Arial Black";
-    size:20px;
     color:red;
     -webkit-text-stroke: 1px #fff;
     text-align: center;
@@ -23,20 +19,47 @@ body{
 }
 .top-wrapper{
     height:450px;
-    background-image:url(画像/greenday__2_.jpeg);
+    background-image:url(greenday__2_.jpeg);
     background-position: center;
     background-size:cover;
+    position:relative;
+    margin:0 auto;
+    display:block;
+    animation:anime1 3s ease;
 }
+@keyframes anime1{
+    0%{
+        opacity:0;
+        top:50px;
+    }
+    100%{
+        opacity:1;
+        top:1px;
+    }
+}
+
 .momo{
       width:300px;
+      position:relative;
+      margin:0 auto;
+      display:block;
+      animation:anime1 3s ease;
   }
+  @keyframes anime1{
+      0%{
+          opacity:0;
+          top:50px;
+      }
+      100%{
+          opacity:1;
+          top:1px;
+      }
+  }
+
 img{
       text-align:center;
       size:cover;
       width:1000px;
-  }
-  .header{
-      background-color:#fff;
   }
   
 a{
@@ -57,7 +80,6 @@ td.father{
     font-size:20px;
 }
 li{
-    
     text-shadow:1px 1px 1px black;
     float:left;
     list-style:none;
@@ -69,7 +91,7 @@ h3.margin{
 a.margin{
     font-style:italic;
     font-family:"Bebes Neue";
-    text-decoration:none;
+    text-decoration:red;
     -webkit-text-stroke:1px #000;
     font-size:40px;
     color:red;
@@ -85,10 +107,15 @@ h4{
     border-radius: 10px;
 }
 h2{
+    font-family:凸版文久見出しゴシック;
     text-decoration: none;
-    color:#000;
-    font-size:19px;
+    color:#fff;
+    font-size:25px;
     font-style:bold;
+    transition:all 1s;
+}
+h2:hover{
+    transform:translate(0px,-15px);
 }
 div{
     text-align:center;
@@ -144,8 +171,60 @@ a.footer{
     color:black;
     font-size: 13px;
 }
-.apple{
-    background-color: #ffffff;
+
+.fade{
+    position:relative;
+    margin:0 auto;
+    display:block;
+    animation:anime1 3s ease;
+}
+@keyframes anime1{
+    0%{
+        opacity:0;
+        top:50px;
+    }
+    100%{
+        opacity:1;
+        top:1px;
+    }
 }
 
+h6{
+    border-top:solid 1px white;
+    border-bottom:solid 1px white;
+    font-size: 40px;
+    color: red;
+    text-align:center;
+    text-shadow:1px 1px 1px white;
+}
+h7{
+    font-family:"Arial Black";
+    font-size:30px;
+    color:white;
+}
+.slide{
+    position:relative;
+    overflow:hidden;
+    width:800px;
+    height:500px;
+    margin:auto;
+}
+.slide img{
+    display:block;
+    position:absolute;
+    width:inherit;
+    height:inherit;
+    opacity:0;
+    animation:slideAnime 9s ease infinite;
+}
+.slide img:nth-of-type(1){animation-delay:0s}
+.slide img:nth-of-type(2){animation-delay:3s}
+.slide img:nth-of-type(3){animation-delay:6s}
+
+@keyframes slideAnime{
+    0% { opacity: 0 }
+   16% { opacity: 1 }
+  33% { opacity: 1 }
+  49% { opacity: 0 }
+ 100% { opacity: 0 }
 }
